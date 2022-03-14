@@ -6,9 +6,6 @@ public class GameManager : MonoBehaviour
     // Indicates the maximum amount of fish on screen"
     public int maxFishOnScreen = 10;
 
-    // Indicates the amount of time in seconds to wait until next respawn
-    public float fishSpwanTime = 3f;
-
     public List<GameObject> fishPrefabs = new List<GameObject>();
     public List<WaypointPath> availableRoutes = new List<WaypointPath>();
 
@@ -25,6 +22,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        Vector3 currentMouse = Input.mousePosition;
+        Ray ray = Camera.main.ScreenPointToRay(currentMouse);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+        Debug.DrawLine(ray.origin, hit.point);
+
         // COUNTDOWN
         /*timeLeft -= Time.deltaTime;
         if (timeLeft < 0)

@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blue_01_0
+      name: teal_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71ae93d5a4b36584081d05206993156f
-      internalID: -752526945
+      spriteID: 949a8c9305c0bef42874418474f774bb
+      internalID: 762364928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_01_1
+      name: teal_1
       rect:
         serializedVersion: 2
         x: 418
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4f82d8867178ce43a49a90b9f99f471
-      internalID: 921664930
+      spriteID: d8675f35a43deb748b9c711e7cc69563
+      internalID: 1311046388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_01_2
+      name: teal_2
       rect:
         serializedVersion: 2
         x: 836
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a24f3930f3318744082ab4f341a2b595
-      internalID: -1947088463
+      spriteID: bf6306f9fea930b4caee55a8d82dfd67
+      internalID: -1626464127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_01_3
+      name: teal_3
       rect:
         serializedVersion: 2
         x: 1254
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d41561fbd41f4646ac6bf936028a0c0
-      internalID: 960619453
+      spriteID: 2b033722b51865a4aae4c37af39df967
+      internalID: 153214068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_01_4
+      name: teal_4
       rect:
         serializedVersion: 2
         x: 0
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a757bfec8b2a29b40b766c95fa8e0311
-      internalID: 606260645
+      spriteID: 3c93d005ba69bd748a512bccef15b7f6
+      internalID: -1914236006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_01_5
+      name: teal_5
       rect:
         serializedVersion: 2
         x: 418
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44dcb694e040d9d4b8193329d829ef3d
-      internalID: 1680257640
+      spriteID: c6fcb86a14d17ae4385cbbd88906201c
+      internalID: 702039242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_01_6
+      name: teal_6
       rect:
         serializedVersion: 2
         x: 836
@@ -268,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 800f8efb1b3184c41bf9c6e86623beb1
-      internalID: -1299300670
+      spriteID: f8a76839fb27630439b79a1fec62f698
+      internalID: 347600157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_01_7
+      name: teal_7
       rect:
         serializedVersion: 2
         x: 1254
@@ -289,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dae5b9093b724dc4bbbdd5a6658c4e6e
-      internalID: -1093486429
+      spriteID: 104c5425eb4daa144b43e4f0c400a930
+      internalID: 1176872075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_01_8
+      name: teal_8
       rect:
         serializedVersion: 2
         x: 0
@@ -310,14 +310,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0ac259c52c64824cb49fc19115a5cbc
-      internalID: -1433833449
+      spriteID: bb16170384b18184a89c9766e9525a42
+      internalID: 1901699155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_01_9
+      name: teal_9
       rect:
         serializedVersion: 2
         x: 418
@@ -331,14 +331,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c48c67e0549d32e48b0ce4a40ed4dbe8
-      internalID: 1252489401
+      spriteID: 95b9209add6e7df44af151decc7451b9
+      internalID: -1362787488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_01_10
+      name: teal_10
       rect:
         serializedVersion: 2
         x: 836
@@ -352,14 +352,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8a92570a4d7d54489b9c5b34b9812ff
-      internalID: 187898173
+      spriteID: ef0b64ae88abbeb4486d67b5df85eabb
+      internalID: -332206569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_01_11
+      name: teal_11
       rect:
         serializedVersion: 2
         x: 1254
@@ -373,8 +373,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37b9bde4fa36b254bbdb2b239f32f5f0
-      internalID: -25599298
+      spriteID: b9b0c6839e462de4d8498fa29efe89a0
+      internalID: 694448510
       vertices: []
       indices: 
       edges: []
@@ -390,18 +390,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      blue_01_10: 187898173
-      blue_01_11: -25599298
-      blue_01_8: -1433833449
-      blue_01_6: -1299300670
-      blue_01_4: 606260645
-      blue_01_5: 1680257640
-      blue_01_3: 960619453
-      blue_01_2: -1947088463
-      blue_01_7: -1093486429
-      blue_01_9: 1252489401
-      blue_01_1: 921664930
-      blue_01_0: -752526945
+      teal_9: -1362787488
+      teal_0: 762364928
+      teal_4: -1914236006
+      teal_6: 347600157
+      teal_3: 153214068
+      teal_8: 1901699155
+      teal_1: 1311046388
+      teal_7: 1176872075
+      teal_11: 694448510
+      teal_10: -332206569
+      teal_5: 702039242
+      teal_2: -1626464127
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
