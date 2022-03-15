@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public float timeLeft = 20f;
     private int score = 0;
 
-    // Start is called before the first frame update
+
     private void Start()
     {
         Time.timeScale = 1;
@@ -24,16 +24,10 @@ public class GameManager : MonoBehaviour
             CreateFish();
     }
 
-    // Update is called once per frame
-    private void Update()
+    private void FixedUpdate()
     {
-        Vector3 currentMouse = Input.mousePosition;
-        Ray ray = Camera.main.ScreenPointToRay(currentMouse);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-        Debug.DrawLine(ray.origin, hit.point);
-
         // Handles the countdown.
-        timeLeft -= Time.deltaTime;
+        timeLeft -= Time.fixedDeltaTime;
         if (timeLeft < 0)
         {
             Time.timeScale = 0;
@@ -58,23 +52,19 @@ public class GameManager : MonoBehaviour
         newFish.GetComponent<FishController>().SetWaypoint(fishRoute, Random.value >= .5f);
     }
 
-    public void OnFishDestroyed(float bonusTime)
+    public void OnFishDestroyed()
     {
-        // Adds the bonus time to current countdown.
-        timeLeft += bonusTime;
-
         // Spawns a new fish..
         CreateFish();
     }
 
-    public void OnFishClicked(int scorePoints)
+    public void OnFishClicked(int scorePoints, float bonusTime)
     {
+        // Updates the score
         score += scorePoints;
         scoreText.SetText($"{score}");
-    }
 
-    protected void UpdateTimerGUI()
-    {
-        // TODO: update GUI
+        // Adds the bonus time to current countdown.
+        timeLeft += bonusTime;
     }
 }

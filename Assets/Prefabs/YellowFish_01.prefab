@@ -125,10 +125,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c44426371eaaa42a587b928d799059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 6
-  idleTime: 6
-  scorePoints: 15
-  bonusTime: 5
+  movementSpeed: 2
+  idleTime: 2
+  scorePoints: 0
+  bonusTime: -1
+  bonusTimePrefab: {fileID: 4441482119066182864, guid: 6ccc5ae5c6daa3f409f1d94fefc17f16, type: 3}
+  runningColor: {r: 0.6039216, g: 0.53333336, b: 0.5803922, a: 1}
 --- !u!95 &3597816043955538817
 Animator:
   serializedVersion: 4

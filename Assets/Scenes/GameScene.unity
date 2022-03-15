@@ -1887,7 +1887,7 @@ MonoBehaviour:
     EndWaypoint: {fileID: 419401431}
   scoreText: {fileID: 698338000}
   timeText: {fileID: 255684092}
-  timeLeft: 20
+  timeLeft: 15
 --- !u!1 &2040883713
 GameObject:
   m_ObjectHideFlags: 0

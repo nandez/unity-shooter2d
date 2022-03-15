@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class FishController : MonoBehaviour
@@ -7,6 +8,9 @@ public class FishController : MonoBehaviour
 
     public int scorePoints;
     public float bonusTime;
+
+    public GameObject bonusTimePrefab;
+    public Color runningColor;
 
     private WaypointPath path;
     private bool reversePath = false;
@@ -49,7 +53,7 @@ public class FishController : MonoBehaviour
                 // so score can be updated, time bonus can be added
                 // and then we need to destroy the current object.
                 gameObject.SetActive(false);
-                gameManager.OnFishDestroyed(bonusTime);
+                gameManager.OnFishDestroyed();
                 Destroy(gameObject, 1f);
             }
             else
@@ -91,10 +95,33 @@ public class FishController : MonoBehaviour
         if (isRunning)
             return;
 
+        // Sets the running mode to avoid normal behaviour..
         isRunning = true;
+
+        // Updates the reverse path related logic
         reversePath = !reversePath;
         spriteRdr.flipX = reversePath;
 
-        gameManager.OnFishClicked(scorePoints);
+        // Updates the sprite tint to let the user know fish is running
+        // and sets up a tween to fade in fade out
+        spriteRdr.color = new Color(runningColor.r, runningColor.g, runningColor.b, 1);
+
+        DOTween.Sequence()
+            .Append(spriteRdr.DOFade(0, 0.15f))
+            .Append(spriteRdr.DOFade(1, 0.15f))
+            .SetLoops(-1, LoopType.Restart)
+            .Play();
+
+        // Notifies the game manager to add current points to score.
+        gameManager.OnFishClicked(scorePoints, bonusTime);
+
+        // Creates a floating text to display the time added as bonus.
+        var bonusTimeObject = Instantiate(bonusTimePrefab, transform.position, Quaternion.identity);
+        var bonusTimeText = bonusTimeObject.GetComponent<TMPro.TMP_Text>();
+        var positiveSign = bonusTime >= 0;
+        bonusTimeText.SetText($"{(positiveSign ? '+' : string.Empty)}{bonusTime}s");
+        bonusTimeText.color = positiveSign ? Color.white : Color.red;
+        bonusTimeText.DOFade(0f, 0.7f);
+        bonusTimeObject.transform.DOMove(bonusTimeObject.transform.position + Vector3.up, 0.75f).OnComplete(() => Destroy(bonusTimeObject));
     }
 }
