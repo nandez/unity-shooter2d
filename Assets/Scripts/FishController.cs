@@ -49,7 +49,7 @@ public class FishController : MonoBehaviour
                 // so score can be updated, time bonus can be added
                 // and then we need to destroy the current object.
                 gameObject.SetActive(false);
-                gameManager.OnFishDestroyed(scorePoints, bonusTime);
+                gameManager.OnFishDestroyed(bonusTime);
                 Destroy(gameObject, 1f);
             }
             else
@@ -94,5 +94,7 @@ public class FishController : MonoBehaviour
         isRunning = true;
         reversePath = !reversePath;
         spriteRdr.flipX = reversePath;
+
+        gameManager.OnFishClicked(scorePoints);
     }
 }

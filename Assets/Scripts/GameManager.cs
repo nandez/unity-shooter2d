@@ -9,12 +9,17 @@ public class GameManager : MonoBehaviour
     public List<GameObject> fishPrefabs = new List<GameObject>();
     public List<WaypointPath> availableRoutes = new List<WaypointPath>();
 
+    public TMPro.TMP_Text scoreText;
+    public TMPro.TMP_Text timeText;
+
     public float timeLeft = 20f;
     private int score = 0;
 
     // Start is called before the first frame update
     private void Start()
     {
+        Time.timeScale = 1;
+
         for (int i = 0; i < maxFishOnScreen; i++)
             CreateFish();
     }
@@ -27,14 +32,17 @@ public class GameManager : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
         Debug.DrawLine(ray.origin, hit.point);
 
-        // COUNTDOWN
-        /*timeLeft -= Time.deltaTime;
+        // Handles the countdown.
+        timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
         {
-            
+            Time.timeScale = 0;
             Debug.Log("END GAME");
             // TODO: end game..
-        }*/
+        }
+
+        timeText.SetText(timeLeft.ToString("0"));
+        timeText.color = timeLeft > 10 ? Color.white : Color.red;
     }
 
     protected void CreateFish()
@@ -50,18 +58,19 @@ public class GameManager : MonoBehaviour
         newFish.GetComponent<FishController>().SetWaypoint(fishRoute, Random.value >= .5f);
     }
 
-    public void OnFishDestroyed(int scorePoints, float bonusTime)
+    public void OnFishDestroyed(float bonusTime)
     {
-        score += scorePoints;
-        
+        // Adds the bonus time to current countdown.
+        timeLeft += bonusTime;
+
         // Spawns a new fish..
         CreateFish();
     }
 
-
-    protected void UpdateScoreGUI()
+    public void OnFishClicked(int scorePoints)
     {
-        // TODO: update GUI
+        score += scorePoints;
+        scoreText.SetText($"{score}");
     }
 
     protected void UpdateTimerGUI()
