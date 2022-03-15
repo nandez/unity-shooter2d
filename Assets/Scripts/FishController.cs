@@ -17,9 +17,11 @@ public class FishController : MonoBehaviour
     private bool isIdle = false;
     private float iddleCounter = 0f;
     private bool isRunning = false;
+    private Sequence runningSequence;
 
     private SpriteRenderer spriteRdr;
     private GameManager gameManager;
+    
 
     private void Start()
     {
@@ -54,6 +56,8 @@ public class FishController : MonoBehaviour
                 // and then we need to destroy the current object.
                 gameObject.SetActive(false);
                 gameManager.OnFishDestroyed();
+                runningSequence.Complete(false);
+                runningSequence.Kill();
                 Destroy(gameObject, 1f);
             }
             else
@@ -106,7 +110,7 @@ public class FishController : MonoBehaviour
         // and sets up a tween to fade in fade out
         spriteRdr.color = new Color(runningColor.r, runningColor.g, runningColor.b, 1);
 
-        DOTween.Sequence()
+        runningSequence = DOTween.Sequence()
             .Append(spriteRdr.DOFade(0, 0.15f))
             .Append(spriteRdr.DOFade(1, 0.15f))
             .SetLoops(-1, LoopType.Restart)
