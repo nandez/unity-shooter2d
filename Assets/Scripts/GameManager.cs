@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
         timeLeft -= Time.fixedDeltaTime;
         if (timeLeft < 0)
         {
+            timeLeft = 0;
             Time.timeScale = 0;
             Debug.Log("END GAME");
             // TODO: end game..
