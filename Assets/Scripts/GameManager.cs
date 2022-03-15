@@ -80,7 +80,6 @@ public class GameManager : MonoBehaviour
 
     public void OnMainMenuButtonClick()
     {
-        Debug.Log("TODO: Main menu navigation..");
-        //SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("MenuScene");
     }
 }
