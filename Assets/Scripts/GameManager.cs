@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,8 +10,14 @@ public class GameManager : MonoBehaviour
     public List<GameObject> fishPrefabs = new List<GameObject>();
     public List<WaypointPath> availableRoutes = new List<WaypointPath>();
 
+    // Refrences to main GUI elements..
     public TMPro.TMP_Text scoreText;
     public TMPro.TMP_Text timeText;
+
+    // References for endgame frame panel.
+    public GameObject endGamePanel;
+    public TMPro.TMP_Text endGameScoreText;
+    public TMPro.TMP_Text endGameTimeText;
 
     public float timeLeft = 20f;
     private int score = 0;
@@ -32,8 +39,10 @@ public class GameManager : MonoBehaviour
         {
             timeLeft = 0;
             Time.timeScale = 0;
-            Debug.Log("END GAME");
-            // TODO: end game..
+
+            endGameScoreText.SetText($"Points: {score}");
+            endGameTimeText.SetText($"Time: {Time.timeSinceLevelLoad:0}s");
+            endGamePanel.SetActive(true);
         }
 
         timeText.SetText(timeLeft.ToString("0"));
@@ -67,5 +76,11 @@ public class GameManager : MonoBehaviour
 
         // Adds the bonus time to current countdown.
         timeLeft += bonusTime;
+    }
+
+    public void OnMainMenuButtonClick()
+    {
+        Debug.Log("TODO: Main menu navigation..");
+        //SceneManager.LoadScene("MenuScene");
     }
 }
