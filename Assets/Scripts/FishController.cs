@@ -12,6 +12,9 @@ public class FishController : MonoBehaviour
     public GameObject bonusTimePrefab;
     public Color runningColor;
 
+    public AudioClip bonusTimeSound;
+    public AudioClip penaltyTimeSound;
+
     private WaypointPath path;
     private bool reversePath = false;
     private bool isIdle = false;
@@ -20,13 +23,15 @@ public class FishController : MonoBehaviour
     private Sequence runningSequence;
 
     private SpriteRenderer spriteRdr;
-    private GameManager gameManager;
+    private GameManager gameMgr;
+    private AudioSource audioSrc;
     
 
     private void Start()
     {
         spriteRdr = GetComponent<SpriteRenderer>();
-        gameManager = FindObjectOfType<GameManager>();
+        gameMgr = FindObjectOfType<GameManager>();
+        audioSrc = GetComponent<AudioSource>();
 
         spriteRdr.flipX = reversePath;
     }
@@ -55,7 +60,7 @@ public class FishController : MonoBehaviour
                 // so score can be updated, time bonus can be added
                 // and then we need to destroy the current object.
                 gameObject.SetActive(false);
-                gameManager.OnFishDestroyed();
+                gameMgr.OnFishDestroyed();
                 runningSequence.Complete(false);
                 runningSequence.Kill();
                 Destroy(gameObject, 1f);
@@ -117,15 +122,18 @@ public class FishController : MonoBehaviour
             .Play();
 
         // Notifies the game manager to add current points to score.
-        gameManager.OnFishClicked(scorePoints, bonusTime);
+        gameMgr.OnFishClicked(scorePoints, bonusTime);
 
         // Creates a floating text to display the time added as bonus.
         var bonusTimeObject = Instantiate(bonusTimePrefab, transform.position, Quaternion.identity);
         var bonusTimeText = bonusTimeObject.GetComponent<TMPro.TMP_Text>();
-        var positiveSign = bonusTime >= 0;
-        bonusTimeText.SetText($"{(positiveSign ? '+' : string.Empty)}{bonusTime}s");
-        bonusTimeText.color = positiveSign ? Color.white : Color.red;
+        var isBonus = bonusTime >= 0;
+        bonusTimeText.SetText($"{(isBonus ? '+' : string.Empty)}{bonusTime}s");
+        bonusTimeText.color = isBonus ? Color.white : Color.red;
         bonusTimeText.DOFade(0f, 0.7f);
         bonusTimeObject.transform.DOMove(bonusTimeObject.transform.position + Vector3.up, 0.75f).OnComplete(() => Destroy(bonusTimeObject));
+
+        // Plays a sound based on time power-up sign..
+        audioSrc.PlayOneShot(isBonus ? bonusTimeSound : penaltyTimeSound);
     }
 }

@@ -870,8 +870,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1036,7 +1036,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.25
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1199,7 +1199,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1165368705}
-  MainColor: {r: 0.9607843, g: 0.9254902, b: 0.6117647, a: 1}
+  MainColor: {r: 0.8862745, g: 0.8235294, b: 0.25490198, a: 1}
   HoverColor: {r: 1, g: 1, b: 1, a: 1}
   hoverClip: {fileID: 8300000, guid: 867c9b48149c82f41b390e0287f65974, type: 3}
   clickAudio: {fileID: 8300000, guid: 0b6b54d42ad2c0441b56addf353505e4, type: 3}
@@ -1988,8 +1988,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288474357
-  m_fontColor: {r: 0.9622642, g: 0.925162, b: 0.6118548, a: 1}
+    rgba: 4282503906
+  m_fontColor: {r: 0.8862745, g: 0.8235294, b: 0.25490198, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2006,8 +2006,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2110,7 +2110,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2207,7 +2207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1351815807}
-  MainColor: {r: 0.9607843, g: 0.9254902, b: 0.6117647, a: 1}
+  MainColor: {r: 0.8862745, g: 0.8235294, b: 0.25490198, a: 1}
   HoverColor: {r: 1, g: 1, b: 1, a: 1}
   hoverClip: {fileID: 8300000, guid: 867c9b48149c82f41b390e0287f65974, type: 3}
   clickAudio: {fileID: 8300000, guid: 0b6b54d42ad2c0441b56addf353505e4, type: 3}
@@ -2493,8 +2493,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288474357
-  m_fontColor: {r: 0.9622642, g: 0.925162, b: 0.6118548, a: 1}
+    rgba: 4282503906
+  m_fontColor: {r: 0.8862745, g: 0.8235294, b: 0.25490198, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2511,8 +2511,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2750,7 +2750,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2847,7 +2847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1821278491}
-  MainColor: {r: 0.9607843, g: 0.9254902, b: 0.6117647, a: 1}
+  MainColor: {r: 0.8862745, g: 0.8235294, b: 0.25490198, a: 1}
   HoverColor: {r: 1, g: 1, b: 1, a: 1}
   hoverClip: {fileID: 8300000, guid: 867c9b48149c82f41b390e0287f65974, type: 3}
   clickAudio: {fileID: 8300000, guid: 0b6b54d42ad2c0441b56addf353505e4, type: 3}
@@ -3004,7 +3004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: Play Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fcefde6e29cbc024da32130a7b3c7561, type: 2}
   m_sharedMaterial: {fileID: 9022688817789669116, guid: fcefde6e29cbc024da32130a7b3c7561, type: 2}
@@ -3013,8 +3013,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288474357
-  m_fontColor: {r: 0.9622642, g: 0.925162, b: 0.6118548, a: 1}
+    rgba: 4282503906
+  m_fontColor: {r: 0.8867924, g: 0.8228351, b: 0.25432533, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3031,8 +3031,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -7,21 +7,25 @@ public class GameManager : MonoBehaviour
     // Indicates the maximum amount of fish on screen"
     public int maxFishOnScreen = 10;
 
+    public float timeLeft = 20f;
+
     public List<GameObject> fishPrefabs = new List<GameObject>();
     public List<WaypointPath> availableRoutes = new List<WaypointPath>();
 
     // Refrences to main GUI elements..
     public TMPro.TMP_Text scoreText;
+
     public TMPro.TMP_Text timeText;
 
     // References for endgame frame panel.
     public GameObject endGamePanel;
+
     public TMPro.TMP_Text endGameScoreText;
     public TMPro.TMP_Text endGameTimeText;
 
-    public float timeLeft = 20f;
-    private int score = 0;
+    public AudioClip endGameAudioClip;
 
+    private int score = 0;
 
     private void Start()
     {
@@ -40,9 +44,14 @@ public class GameManager : MonoBehaviour
             timeLeft = 0;
             Time.timeScale = 0;
 
+            // Updates the endgame frame GUI
             endGameScoreText.SetText($"Points: {score}");
             endGameTimeText.SetText($"Time: {Time.timeSinceLevelLoad:0}s");
             endGamePanel.SetActive(true);
+
+            // Plays the endgame clip
+            MusicController.Instance.Stop();
+            MusicController.Instance.PlayOneShot(endGameAudioClip);
         }
 
         timeText.SetText(timeLeft.ToString("0"));

@@ -880,8 +880,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1310,7 +1310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1906502957}
-  MainColor: {r: 0.9607843, g: 0.9254902, b: 0.6117647, a: 1}
+  MainColor: {r: 0.8862745, g: 0.8235294, b: 0.25490198, a: 1}
   HoverColor: {r: 1, g: 1, b: 1, a: 1}
   hoverClip: {fileID: 8300000, guid: 867c9b48149c82f41b390e0287f65974, type: 3}
   clickAudio: {fileID: 8300000, guid: 0b6b54d42ad2c0441b56addf353505e4, type: 3}
@@ -1887,7 +1887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -140.26599}
+  m_AnchoredPosition: {x: 0, y: -138}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327014156
@@ -1919,8 +1919,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288474357
-  m_fontColor: {r: 0.9607843, g: 0.9254902, b: 0.6117647, a: 1}
+    rgba: 4282503906
+  m_fontColor: {r: 0.8862745, g: 0.8235294, b: 0.25490198, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1937,8 +1937,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.45
-  m_fontSizeBase: 33.45
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2411,7 +2411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -23.123737}
+  m_AnchoredPosition: {x: 0, y: -20.857746}
   m_SizeDelta: {x: 444, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1793688305
@@ -2443,8 +2443,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288474357
-  m_fontColor: {r: 0.9607843, g: 0.9254902, b: 0.6117647, a: 1}
+    rgba: 4282503906
+  m_fontColor: {r: 0.8862745, g: 0.8235294, b: 0.25490198, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2461,8 +2461,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.45
-  m_fontSizeBase: 33.45
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2664,6 +2664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxFishOnScreen: 10
+  timeLeft: 15
   fishPrefabs:
   - {fileID: 5779807847822105223, guid: adc482a4af86d3b4fb7a8d70dd0f3a53, type: 3}
   - {fileID: 5310998967997109363, guid: c3feed26e522b0744b042b69cf15c943, type: 3}
@@ -2703,7 +2704,7 @@ MonoBehaviour:
   endGamePanel: {fileID: 1811190232}
   endGameScoreText: {fileID: 1327014156}
   endGameTimeText: {fileID: 1793688305}
-  timeLeft: 15
+  endGameAudioClip: {fileID: 8300000, guid: 76f135fe540d8ff4c8b37bca7cde88e6, type: 3}
 --- !u!1 &1906502955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2771,8 +2772,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288474357
-  m_fontColor: {r: 0.9622642, g: 0.925162, b: 0.6118548, a: 1}
+    rgba: 4282503906
+  m_fontColor: {r: 0.8862745, g: 0.8235294, b: 0.25490198, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2789,8 +2790,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -41,18 +41,27 @@ public class MusicController : MonoBehaviour
         if (audioSrc.isPlaying)
             return;
 
-        audioSrc.Play();
+        PlayMusic();
     }
 
     public void PauseMusic()
     {
-        if (audioSrc.isPlaying)
-            audioSrc.Pause();
+        audioSrc?.Pause();
     }
 
-    public void ResumeMusic()
+    public void PlayMusic()
     {
-        if (!audioSrc.isPlaying)
+        if(audioSrc?.isPlaying == false)
             audioSrc.Play();
+    }
+
+    public void Stop()
+    {
+        audioSrc?.Stop();
+    }
+
+    public void PlayOneShot(AudioClip clip)
+    {
+        audioSrc?.PlayOneShot(clip);
     }
 }
